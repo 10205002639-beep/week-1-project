@@ -16,20 +16,20 @@ function displayProfileField(string $label, string $value): string
 // Decision: an array of profiles lets me test a valid and an invalid case.
 $profiles = [
     [
-        "fullName"   => "Pema Dorji",
-        "cid"        => "10000000001",
+        "fullName"   => "Dorji Dema",
+        "cid"        => "10000006781",
         "dob"        => "2001-04-12",
-        "dzongkhag"  => "Thimphu",
-        "gewog"      => "Chang",
+        "dzongkhag"  => "Chukha",
+        "gewog"      => "Gedu",
         "occupation" => "Student",
         "isActive"   => true,
     ],
     [
-        "fullName"   => "Sonam Choden",
-        "cid"        => "12345",          // invalid: too short
-        "dob"        => "1985-11-30",
+        "fullName"   => "Sonam Wangmo",
+        "cid"        => "11104556234",          // invalid: too short
+        "dob"        => "1995-1-30",
         "dzongkhag"  => "Paro",
-        "gewog"      => "Doteng",
+        "gewog"      => "Hungrel",
         "occupation" => "Farmer",
         "isActive"   => false,
     ],
