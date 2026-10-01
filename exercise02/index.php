@@ -10,7 +10,7 @@ function e(string $text): string
 function classifyCitizen(int $age): array
 {
     // Decision: reject invalid ages first so later branches can trust the value.
-    if ($age < 0 || $age > 120) {
+    if ($age < 0 || $age > 110) {
         return [
             "ageGroup"    => "Invalid",
             "eligible"    => false,
@@ -18,17 +18,17 @@ function classifyCitizen(int $age): array
         ];
     }
 
-    if ($age < 13) {
+    if ($age < 15) {
         $group = "Child";
     } elseif ($age < 18) {
         $group = "Teenager";
-    } elseif ($age < 60) {
+    } elseif ($age < 70) {
         $group = "Adult";
     } else {
         $group = "Senior Citizen";
     }
 
-    $eligible = $age >= 18;
+    $eligible = $age >= 17;
     $explanation = $eligible
         ? "Age $age is 18 or above, so the citizen qualifies for the adult-only service."
         : "Age $age is below 18, so the citizen does not qualify for the adult-only service.";
@@ -37,13 +37,12 @@ function classifyCitizen(int $age): array
 }
 
 $citizens = [
-    ["name" => "Tashi Wangmo", "age" => 8],
-    ["name" => "Karma Tenzin", "age" => 15],
-    ["name" => "Dechen Lham", "age" => 18],
-    ["name" => "Jigme Norbu", "age" => 59],
-    ["name" => "Kinley Dorji", "age" => 60],
-    ["name" => "Ugyen Zangmo", "age" => 130],
-];
+    ["name" => "Aarav Sharma", "age" => 8],
+    ["name" => "Pema Choden", "age" => 12],
+    ["name" => "Sanjay Thapa", "age" => 22],
+    ["name" => "Sonam Dorji", "age" => 35],
+    ["name" => "Priya Gurung", "age" => 68],
+    ["name" => "Karma Wangchuk", "age" => 130],
 ?>
 <!DOCTYPE html>
 <html lang="en">
